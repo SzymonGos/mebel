@@ -1,0 +1,52 @@
+.card-body
+    padding: 1rem
+
+.card
+    margin-bottom: 2rem
+
+.quick-view
+    position: absolute
+    padding: 1rem
+    z-index: -100
+    width: 100%
+    background-color: rgba(255, 255, 255, .7)
+    text-align: center 
+    transition-duration: 1s
+    
+.product-link .quick-view
+    margin-top: 0
+    z-index: 0
+        
+
+.product-link:hover .quick-view
+    transition: margin-top .4s
+    margin-top: -56px
+    z-index: 0
+
+
+.card-img-top
+    height: 250px
+    width: 100%
+    object-fit: cover
+    
+
+    @include media-breakpoint-up(sm)
+        height: 350px
+    
+
+.card-body
+    position: relative
+    z-index: 100
+    background-color: $main-white
+
+.card-header
+    background-color: $main-white
+    
+.btn
+    outline: none !important
+
+.border-top
+    border-top: 1px solid #b8babd !important
+
+.border-bottom
+    border-bottom: 1px solid #b8babd !important

@@ -1,0 +1,235 @@
+body
+    font-family: 'Montserrat', sans-serif
+
+.font-size-small
+    font-size: .9rem
+
+.font-size-medium
+    font-size: 1.3rem
+.l-spacing
+    letter-spacing: 1px
+
+.uppercase
+    text-transform: uppercase
+
+.small-social-list
+    margin: 1rem 0
+    display: none
+
+.input-control
+    border: none
+    border-bottom: 1px solid
+    font-size: .8rem
+    outline: none
+    padding: 0.3rem 0.2rem
+    letter-spacing: 0px
+
+.btn-search
+    display: inline-block
+    color: #212529
+    text-align: center
+    vertical-align: middle
+    user-select: none
+    background-color: transparent
+    font-size: 1rem
+    border: none
+
+    .bi-search
+        padding: 0.375rem 0.75rem
+        transition: background-color 0.5s ease, opacity 0.5s ease-in-out, color 0.5s ease
+        &:hover
+            opacity: 0.8
+            background-color: #212529
+            color: #fff
+
+.social-wrapper
+    display: flex
+    justify-content: center
+    align-items: center
+    position: fixed
+    right: 0
+    top: 50%
+    transform: translateY(-50%)
+    width: 60px
+
+    &__link
+        margin: 1em 0
+        padding: 0 .5em
+        font-size: 1.2rem
+
+.bi
+    color: black
+
+.subtitle
+    text-transform: uppercase
+    font-size: 1.5rem
+    letter-spacing: 1px
+    font-weight: 500
+
+.rectangle
+    width: 15px
+    height: 3px
+    background-color: black
+
+.bg-custom
+    background-color: $main-bg-color
+    &--dark
+        background-color: #F5F6F8
+
+.hr-line
+    width: 90%
+    height: 1px
+    background-color: #949692
+    margin: 0
+
+.line-height
+    line-height: 1.875rem
+
+
+.img-wrapper
+    height: 600px
+    background-color: $main-bg-color
+    display: flex
+    justify-content: center
+    align-items: center
+    
+    &--sale
+        height: 300px
+
+
+.img-sale-wrapper
+    height: 300px
+
+
+.overlay
+    width: 95%
+    height: 95%
+    z-index: 1
+    position: absolute
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.4)),
+
+
+.inspiration-img
+    width: 95%
+    height: 95%
+    object-fit: cover
+    
+    &--sale
+        width: 100%
+        height: 100%
+        object-fit: cover
+
+.font-size-1 
+    font-size: 1.5rem
+
+.img-about-wrapper
+    height: 350px
+
+    .img-about
+        height: 100%
+        width: 100%
+        object-fit: cover
+
+.filter-item-size
+    font-size: .9rem
+
+.separator
+    position: relative
+    text-align: center
+    
+    &-line
+        border-bottom: 1px solid #dcdede
+        width: 100%
+        float: left
+        position: relative
+        z-index: 1
+        top: 26px
+
+    &-text  
+        padding: 0 25px 0 25px
+        color: black
+        background-color: white
+        font-family: "FS Meridian Medium",sans-serif
+        font-size: 15px
+        position: relative
+        z-index: 2
+        top: 16px
+        display: inline-block
+        float: none
+
+
+.product-img
+    width: 100%
+    height: 60vh
+    object-fit: cover
+
+
+.icon-background
+    padding: 10px 11px
+    border-radius: 50%
+    background-color: $main-bg-color
+    
+    & .bi-heart
+          vertical-align: middle
+
+
+@include media-breakpoint-down(sm)
+
+    .sticky-top
+        position: fixed
+        left: 0
+        right: 0
+
+    .social-wrapper
+        display: none
+
+    .input-control
+        width: calc( 100% - 40px )
+        font-size: 1.1rem
+    
+    .small-social-list
+        display: block
+        
+@include media-breakpoint-down(md)
+    
+    .img-wrapper
+        height: 400px
+    
+    .footer
+        font-size: .8rem
+
+    .navbar
+        font-size: .8rem
+
+
+@include media-breakpoint-up(md)
+
+    body
+        margin: 0 60px
+
+    .first-nav
+        padding: 1rem 0rem
+        margin: 0 60px
+
+    .second-nav
+        top: 62px
+        padding-bottom: 1.5rem
+        height: 100px
+
+@include media-breakpoint-only(md)
+
+    body
+        margin: 0 35px
+
+    .social-wrapper
+        width: 35px
+
+    .jumbotron
+        height: 50vh
+    
+
+
+            
+    
+
+    

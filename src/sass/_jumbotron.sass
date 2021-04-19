@@ -1,0 +1,49 @@
+@mixin jumbotron-bg
+    width: 100%
+    height: 100%
+    position: absolute
+    left: 0
+    top: 0
+    background-size: cover
+    background-position: center
+    z-index: -1
+    transform: translateZ(-1px) scale(1.2)
+
+.jumbotron
+    position: relative
+    overflow: hidden     
+    height: 75vh
+    z-index: 0
+    color: #fff
+    display: flex
+    font-weight: 400
+    align-items: center
+
+    &--short
+        height: 40vh
+
+.jumbotron-bg-hero
+    @include jumbotron-bg
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/images/hero.jpg') 
+
+.jumbotron-bg-about
+    @include jumbotron-bg
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/images/about/about.jpg') 
+
+.jumbotron-bg-contact
+    @include jumbotron-bg
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url('../assets/images/contact/contact.jpg') 
+
+@include media-breakpoint-up(sm)
+
+    .jumbotron-bg-hero
+        background-attachment: fixed
+
+    .jumbotron-bg-about
+        background-attachment: fixed
+        
+
+@include media-breakpoint-only(md)
+
+    .jumbotron
+        height: 60vh    

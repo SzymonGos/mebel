@@ -1,0 +1,44 @@
+.btn-custom
+    padding: .8rem 1.7rem
+    border: 1px solid $main-white
+    font-size: 1.2rem
+    color: $main-white
+    letter-spacing: 1px
+    background-color: transparent
+    border-color: $main-white
+    transition: background-color 0.5s ease, opacity 0.5s ease-in-out, color 0.5s ease
+
+    &:hover
+        opacity: 0.8
+        background-color: $main-white 
+        color: $main-black
+        border-color: $main-white
+
+    &--dark
+        color: $main-black
+        border-color: $main-black
+        &:hover
+            opacity: 0.8
+            background-color: $main-black 
+            color: $main-white
+            border-color: $main-black
+
+    &--green
+        color: $dark-green
+        background-color: $main-white
+        border-color: $dark-green
+        &:hover
+            opacity: 0.8
+            background-color: $dark-green
+            color: $main-white
+            border-color: $dark-green
+
+.btn-secondary
+    padding: .7rem 2rem
+
+.btn-login-social
+    color: #fff
+    background-color: #117cee
+    
+    &:hover
+        background-color: #0f6ed3
