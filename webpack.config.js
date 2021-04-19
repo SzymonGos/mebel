@@ -14,7 +14,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].bundle.js',
-    publicPath: '/'
+    publicPath: '/mebel/'
   },
 
   devServer: {
@@ -108,10 +108,7 @@ module.exports = {
       template: './src/templates/whitechair1.html',
       filename: 'whitechair1.html'
     }),
-    // new webpack.ProvidePlugin({
-    //   $: "jquery",
-    //   jQuery: "jquery"
-    // }),
+
     new webpack.HotModuleReplacementPlugin(),
     new MiniCssExtractPlugin({
       // Options similar to the same options in webpackOptions.output
