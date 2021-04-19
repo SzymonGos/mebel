@@ -12,7 +12,7 @@ module.exports = {
   mode: env,
 
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].bundle.js',
     publicPath: '/'
   },
