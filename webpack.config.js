@@ -5,6 +5,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyPlugin = require("copy-webpack-plugin");
 
 const env = process.env.NODE_ENV;
+const pPath = (env === 'production' ? "/mebel/" : "/");
+const webfontsPath = (env === 'production' ? '/mebel/webfonts' : '../webfonts');
+const sourceMap = (env === 'production' ? true : false );
+
 
 module.exports = {
   entry: './src/index.js',
@@ -14,7 +18,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'docs'),
     filename: 'js/[name].bundle.js',
-    publicPath: '/mebel/'
+    publicPath: pPath
   },
 
   devServer: {
@@ -38,8 +42,21 @@ module.exports = {
         test: /\.(sa|sc|c)ss$/,
         use: [
           env == 'development' ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'sass-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: sourceMap,
+            },
+          },
+          {
+            loader: 'sass-sourcemap-loader',
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: sourceMap,
+            },
+          },
         ]
       },
       {
@@ -50,7 +67,7 @@ module.exports = {
             options: {
                 name: '[name].[ext]',
                 outputPath: 'webfonts',
-                publicPath: '/mebel/webfonts',
+                publicPath: webfontsPath,
             },
         }
       },

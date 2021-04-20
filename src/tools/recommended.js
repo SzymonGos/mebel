@@ -9,3 +9,5 @@ for (const button of buttons) {
 }
 
 export {showRecommendations}
+
+// set timeout for displaying btn and recommenderd box
