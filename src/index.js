@@ -3,6 +3,7 @@ import 'bootstrap/dist/js/bootstrap';
 require('bootstrap-icons/font/bootstrap-icons.css');
 import $ from 'jquery';
 import {showRecommendations} from './tools/recommended'
+import {signMeOut} from './tools/signOutAlert'
 
 
 // switch filter plus/minus icon 
@@ -13,7 +14,3 @@ $(document).ready(function () {
         $(this).prev(".card-header").find(".bi").removeClass("bi-dash").addClass("bi-plus");
     });
 });
-
-
-
-
