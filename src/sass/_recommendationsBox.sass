@@ -1,22 +1,33 @@
 .box
     width: 500px
     height: 300px
+    left: -500px
     background-color: $main-white
     position: fixed
     bottom: 80px
     z-index: 99999
-    left: -500px
     transition: transform 1s
-    transform: translateX(115%)
-    animation: fadeIn 1s
+    transform: translateX(-115%)
+    animation: fadeOut 1s
     box-shadow: 0 3px 10px rgba(0,0,0,.1)
     border-radius: 5px
+    @keyframes fadeOut
+        0%
+            opacity: 1            
+        100%
+            opacity: 0
     
+
+.show
+    transform: translateX(115%)
+    transition: 1s
+    animation: fadeIn 1s
     @keyframes fadeIn
         0%
             opacity: 0            
         100%
             opacity: 1
+
 
 @include media-breakpoint-down(sm)
     .box
@@ -34,17 +45,6 @@
     cursor: pointer
     z-index: 99999
     box-shadow: 0 3px 10px rgba(0,0,0,.2)
-
-.hide
-    transform: translateX(-100%)
-    transition: 1s
-    animation: fadeOut 1s
-    @keyframes fadeOut
-        0%
-            opacity: 1            
-        100%
-            opacity: 0
-
 
 .img-fit
     height: 100%

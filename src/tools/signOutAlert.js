@@ -1,10 +1,17 @@
 // alert second device
 
-function signMeOut() {
-    console.log('hello')
 
-    alert("Hi")
-    //confirm("You are signed in other devices. Would you like us to sign off?");
+
+function signMeOut() {
+    confirm("You are still signed in other devices. Would you like to sign out of these devices?");
 }
 
-export {signMeOut}
+function signMeOutInit() {
+    const signInBtn = document.querySelector(".btn-signin");
+
+    if(signInBtn !== null){
+        signInBtn.addEventListener( 'click', signMeOut, false );
+    }
+}
+
+export {signMeOutInit}
