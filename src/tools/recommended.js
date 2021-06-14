@@ -4,9 +4,9 @@ function showRecommendations(){
 
     if(recommendedBox == null) return; 
     
-    recommendedBox.classList.toggle("show");
+    recommendedBox.classList.toggle("showBox");
 
-    let isBoxVisible =  recommendedBox.classList.contains("show");
+    let isBoxVisible =  recommendedBox.classList.contains("showBox");
     sessionStorage.setItem('status', isBoxVisible);
 }
 
@@ -22,7 +22,7 @@ function showRecommendationsInit(){
     let boxStatus = sessionStorage.getItem('status');
 
     if(boxStatus === "true" || boxStatus === null){
-        recommendedBox.classList.add("show");
+        recommendedBox.classList.add("showBox");
     }
 }
 
