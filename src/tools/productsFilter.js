@@ -1,3 +1,5 @@
+import $ from 'jquery';
+
 function productsFilter(){
     $(".collapse").on('show.bs.collapse', function () {
         $(this).prev(".card-header").find(".bi").removeClass("bi-plus").addClass("bi-dash");
