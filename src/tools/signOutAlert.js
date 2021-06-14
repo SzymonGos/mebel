@@ -1,7 +1,3 @@
-// alert second device
-
-
-
 function signMeOut() {
     confirm("You are still signed in other devices. Would you like to sign out of these devices?");
 }
